@@ -1,0 +1,11 @@
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\bin\Debug\net8.0\BrainSpineAnalytics.Common.deps.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\bin\Debug\net8.0\BrainSpineAnalytics.Common.dll
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\bin\Debug\net8.0\BrainSpineAnalytics.Common.pdb
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\obj\Debug\net8.0\BrainSpineAnalytics.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\obj\Debug\net8.0\BrainSpineAnalytics.Common.AssemblyInfoInputs.cache
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\obj\Debug\net8.0\BrainSpineAnalytics.Common.AssemblyInfo.cs
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\obj\Debug\net8.0\BrainSpineAnalytics.Common.csproj.CoreCompileInputs.cache
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\obj\Debug\net8.0\BrainSpineAnalytics.Common.dll
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\obj\Debug\net8.0\refint\BrainSpineAnalytics.Common.dll
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\obj\Debug\net8.0\BrainSpineAnalytics.Common.pdb
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Common\obj\Debug\net8.0\ref\BrainSpineAnalytics.Common.dll
