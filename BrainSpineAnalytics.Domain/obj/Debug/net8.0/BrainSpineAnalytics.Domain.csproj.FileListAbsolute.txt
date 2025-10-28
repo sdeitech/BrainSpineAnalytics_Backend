@@ -9,3 +9,4 @@ D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpin
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Domain\obj\Debug\net8.0\refint\BrainSpineAnalytics.Domain.dll
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Domain\obj\Debug\net8.0\BrainSpineAnalytics.Domain.pdb
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Domain\obj\Debug\net8.0\ref\BrainSpineAnalytics.Domain.dll
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Domain\obj\Debug\net8.0\BrainSpineAnalytics.Domain.sourcelink.json

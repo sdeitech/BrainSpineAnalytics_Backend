@@ -17,5 +17,4 @@ D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpin
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\refint\BrainSpineAnalytics.Infrastructure.dll
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.pdb
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\ref\BrainSpineAnalytics.Infrastructure.dll
-D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\bin\Debug\net8.0\BrainSpineAnalytics.Infrastructure.runtimeconfig.json
-D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.genruntimeconfig.cache
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.sourcelink.json

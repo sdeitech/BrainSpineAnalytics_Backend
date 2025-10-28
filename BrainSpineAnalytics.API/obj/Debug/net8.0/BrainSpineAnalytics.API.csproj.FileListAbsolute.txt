@@ -103,6 +103,6 @@ D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpin
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\obj\Debug\net8.0\BrainSpineAnalytics.API.genruntimeconfig.cache
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\obj\Debug\net8.0\ref\BrainSpineAnalytics.API.dll
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\obj\Debug\net8.0\BrainSpineAnalytics.API.MvcApplicationPartsAssemblyInfo.cs
-D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Npgsql.dll
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\obj\Debug\net8.0\BrainSpineAnalytics.API.sourcelink.json
