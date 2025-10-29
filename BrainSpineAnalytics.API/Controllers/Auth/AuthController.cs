@@ -3,7 +3,7 @@ using BrainSpineAnalytics.Application.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BrainSpineAnalytics.API.Controllers
+namespace BrainSpineAnalytics.API.Controllers.Auth
 {
     [Route("api/[controller]")]
     [ApiController]

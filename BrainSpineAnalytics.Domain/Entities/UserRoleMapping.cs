@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BrainSpineAnalytics.Domain.Entities
 {
@@ -30,12 +25,10 @@ namespace BrainSpineAnalytics.Domain.Entities
         public int? DeletedBy { get; set; }
         public DateTime? DeletedAt { get; set; }
 
-        // No virtual
         [ForeignKey(nameof(UserId))]
-        public User User { get; set; }
+        public User User { get; set; } = null!;
 
         [ForeignKey(nameof(RoleId))]
-        public Role Role { get; set; }
+        public Role Role { get; set; } = null!;
     }
-
 }
