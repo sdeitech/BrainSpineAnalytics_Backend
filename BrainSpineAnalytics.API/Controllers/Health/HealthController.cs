@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BrainSpineAnalytics.API.Controllers.Health
 {
  [ApiController]
- [Route("api123/[controller]")]
+ [Route("api/[controller]")]
  public class HealthController : ControllerBase
  {
  [HttpGet]
