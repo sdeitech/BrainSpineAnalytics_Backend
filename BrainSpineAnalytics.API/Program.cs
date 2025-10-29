@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 // DbContext registration (configure your connection string)
 
 builder.Services.AddDbContext<BrainSpineDBContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("MasterDbConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("BrainSpineDBConnection")));
 
 // DI registrations
 builder.Services.AddScoped<IAuthRepo, AutRepo>();

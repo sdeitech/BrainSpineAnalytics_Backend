@@ -1,23 +1,27 @@
-﻿using BrainSpineAnalytics.Application.DTOs;
+﻿using BrainSpineAnalytics.Application.Configuration;
+using BrainSpineAnalytics.Application.DTOs;
 using BrainSpineAnalytics.Application.Interfaces.Repositories;
 using BrainSpineAnalytics.Application.Interfaces.Services;
 using BrainSpineAnalytics.Common.Constants;
 using BrainSpineAnalytics.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BrainSpineAnalytics.Infrastructure.Implementations.Services
 {
     public class AuthenticationService : IAuthenticationService
     {
         private readonly IAuthRepo _authRepo;
-        public AuthenticationService(IAuthRepo authRepo)
+        private readonly JwtSettings _jwtSettings;
+
+        public AuthenticationService(IAuthRepo authRepo, IOptions<JwtSettings> jwtOptions)
         {
             _authRepo = authRepo;
+            _jwtSettings = jwtOptions.Value;
         }
         public async Task<AuthResponse> LoginAsync(LoginRequest request)
         {
@@ -29,8 +33,32 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services
             if (!string.Equals(user.PasswordHash, incomingHash, StringComparison.Ordinal))
                 return new AuthResponse { Success = false, Message = CommonConstants.Messages.InvalidCredentials };
 
-            // Token generation can be added later
-            return new AuthResponse { Success = true, Message = CommonConstants.Messages.LoginSuccess, Token = null };
+            var token = GenerateJwtToken(user);
+            return new AuthResponse { Success = true, Message = CommonConstants.Messages.LoginSuccess, Token = token };
+        }
+
+        private string GenerateJwtToken(User user)
+        {
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserId.ToString()),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim("firstName", user.FirstName ?? string.Empty),
+                new Claim("lastName", user.LastName ?? string.Empty)
+            };
+
+            var token = new JwtSecurityToken(
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(_jwtSettings.ExpiryMinutes),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
         public async Task<AuthResponse> RegisterAsync(RegisterRequest request)

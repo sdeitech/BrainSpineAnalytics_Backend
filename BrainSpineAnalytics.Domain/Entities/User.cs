@@ -44,6 +44,8 @@ namespace BrainSpineAnalytics.Domain.Entities
 
         public int? UpdatedBy { get; set; }
         public DateTime? UpdatedAt { get; set; }
+        public int? DeletedBy { get; set; }
+        public DateTime? DeletedAt { get; set; }
     }
 
 }

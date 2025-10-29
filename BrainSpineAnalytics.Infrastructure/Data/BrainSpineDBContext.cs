@@ -1,5 +1,6 @@
 ﻿using BrainSpineAnalytics.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BrainSpineAnalytics.Infrastructure.Data
 {
@@ -17,7 +18,7 @@ namespace BrainSpineAnalytics.Infrastructure.Data
             // Example configuration for User
             modelBuilder.Entity<User>(entity =>
             {
-                entity.ToTable("Users");
+                entity.ToTable("Users"); // <-- FIX: Use .ToTable() from Microsoft.EntityFrameworkCore
 
                 entity.HasKey(e => e.UserId);
                 entity.Property(e => e.UserId)

@@ -3,6 +3,7 @@ D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpin
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.AssemblyInfoInputs.cache
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.AssemblyInfo.cs
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.csproj.CoreCompileInputs.cache
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.sourcelink.json
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\bin\Debug\net8.0\BrainSpineAnalytics.Infrastructure.deps.json
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\bin\Debug\net8.0\BrainSpineAnalytics.Infrastructure.dll
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\bin\Debug\net8.0\BrainSpineAnalytics.Infrastructure.pdb
@@ -17,4 +18,3 @@ D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpin
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\refint\BrainSpineAnalytics.Infrastructure.dll
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.pdb
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\ref\BrainSpineAnalytics.Infrastructure.dll
-D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.Infrastructure\obj\Debug\net8.0\BrainSpineAnalytics.Infrastructure.sourcelink.json
