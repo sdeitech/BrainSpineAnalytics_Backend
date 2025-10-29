@@ -41,7 +41,7 @@ namespace BrainSpineAnalytics.Infrastructure.Data
 
             modelBuilder.Entity<UserRoleMapping>(entity =>
             {
-                entity.ToTable("UserRoleMappings");
+                entity.ToTable("UserRoleMapping");
                 entity.HasKey(e => e.UserRoleMappingId);
                 entity.Property(e => e.UserRoleMappingId).ValueGeneratedOnAdd();
 

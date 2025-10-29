@@ -38,5 +38,20 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Repositories
             user.PasswordHash = newPasswordHash;
             await _context.SaveChangesAsync();
         }
+
+        // Create a user-role mapping
+        public async Task AddUserRoleMappingAsync(int userId, int roleId)
+        {
+            var mapping = new UserRoleMapping
+            {
+                UserId = userId,
+                RoleId = roleId,
+                IsActive = true,
+                IsDeleted = false,
+                CreatedAt = DateTime.UtcNow
+            };
+            await _context.UserRoleMappings.AddAsync(mapping);
+            await _context.SaveChangesAsync();
+        }
     }
 }

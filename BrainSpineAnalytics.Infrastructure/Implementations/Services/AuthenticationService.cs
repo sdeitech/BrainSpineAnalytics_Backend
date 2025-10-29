@@ -51,13 +51,21 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services
         {
             if (string.IsNullOrWhiteSpace(_jwtSettings.Key))
                 throw new InvalidOperationException("JwtSettings.Key is not configured.");
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+            var keyBytes = Encoding.UTF8.GetBytes(_jwtSettings.Key);
+            if (keyBytes.Length < 32)
+                throw new InvalidOperationException("JwtSettings.Key must be at least 256 bits (32 bytes).");
+
+            var securityKey = new SymmetricSecurityKey(keyBytes);
+            var creds = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var now = DateTime.UtcNow;
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserId.ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Iat, EpochTime.GetIntDate(now).ToString(), ClaimValueTypes.Integer64),
                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                 new Claim("firstName", user.FirstName ?? string.Empty),
                 new Claim("lastName", user.LastName ?? string.Empty)
@@ -72,7 +80,8 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services
                 issuer: _jwtSettings.Issuer,
                 audience: _jwtSettings.Audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(_jwtSettings.ExpiryMinutes),
+                notBefore: now,
+                expires: now.AddMinutes(_jwtSettings.ExpiryMinutes),
                 signingCredentials: creds
             );
 
@@ -94,6 +103,9 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services
             };
 
             await _authRepo.AddAsync(newUser);
+
+            // Map default role (RoleId =2) for newly registered user
+            await _authRepo.AddUserRoleMappingAsync(newUser.UserId, 2);
 
             return new AuthResponse { Success = true, Message = CommonConstants.Messages.UserRegistered };
         }

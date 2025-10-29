@@ -18,4 +18,8 @@
     <ProjectReference Include="..\BrainSpineAnalytics.Infrastructure\BrainSpineAnalytics.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Filters\" />
+  </ItemGroup>
+
 </Project>

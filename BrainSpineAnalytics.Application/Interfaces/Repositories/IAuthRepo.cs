@@ -8,5 +8,6 @@ namespace BrainSpineAnalytics.Application.Interfaces.Repositories
         Task AddAsync(User user);
         Task<IReadOnlyList<string>> GetActiveRoleNamesByUserIdAsync(int userId);
         Task UpdatePasswordHashAsync(int userId, string newPasswordHash);
+        Task AddUserRoleMappingAsync(int userId, int roleId);
     }
 }
