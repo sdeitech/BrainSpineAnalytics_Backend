@@ -1,7 +1,7 @@
-﻿using BrainSpineAnalytics.Application.DTOs;
-using BrainSpineAnalytics.Application.Interfaces.Services;
-using Microsoft.AspNetCore.Http;
+﻿using BrainSpineAnalytics.Application.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
+using BrainSpineAnalytics.API.Models.Requests.AuthRequest;
+using BrainSpineAnalytics.Application.DTOs.RequestDTOs.AuthDTO;
 
 namespace BrainSpineAnalytics.API.Controllers.Auth
 {
@@ -9,27 +9,41 @@ namespace BrainSpineAnalytics.API.Controllers.Auth
     [ApiController]
     public class AuthController : ControllerBase
     {
-            private readonly IAuthenticationService _authService;
+        private readonly IAuthenticationService _authService;
 
-            public AuthController(IAuthenticationService authService)
-            {
-                _authService = authService;
-            }
-
-            [HttpPost("register")]
-            public async Task<IActionResult> Register([FromBody] RegisterRequest request)
-            {
-                var result = await _authService.RegisterAsync(request);
-                if (!result.Success) return BadRequest(result);
-                return Ok(result);
-            }
-
-            [HttpPost("login")]
-            public async Task<IActionResult> Login([FromBody] LoginRequest request)
-            {
-                var result = await _authService.LoginAsync(request);
-                if (!result.Success) return Unauthorized(result);
-                return Ok(result);
-            }
+        public AuthController(IAuthenticationService authService)
+        {
+            _authService = authService;
         }
+
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] SignupRequest request)
+        {
+            if (!ModelState.IsValid) return ValidationProblem(ModelState);
+            var appRequest = new SignupRequestDTO
+            {
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                Email = request.Email,
+                Password = request.Password
+            };
+            var result = await _authService.RegisterAsync(appRequest);
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        {
+            if (!ModelState.IsValid) return ValidationProblem(ModelState);
+            var appRequest = new LoginRequestDTO
+            {
+                Email = request.Email,
+                Password = request.Password
+            };
+            var result = await _authService.LoginAsync(appRequest);
+            if (!result.Success) return Unauthorized(result);
+            return Ok(result);
+        }
+    }
 }

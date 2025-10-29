@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BrainSpineAnalytics.Application.DTOs
+namespace BrainSpineAnalytics.Application.DTOs.ResponseDTOs
 {
     public class AuthResponse
     {

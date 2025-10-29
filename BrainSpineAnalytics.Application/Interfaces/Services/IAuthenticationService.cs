@@ -1,15 +1,11 @@
-﻿using BrainSpineAnalytics.Application.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BrainSpineAnalytics.Application.DTOs.RequestDTOs.AuthDTO;
+using BrainSpineAnalytics.Application.DTOs.ResponseDTOs;
 
 namespace BrainSpineAnalytics.Application.Interfaces.Services
 {
     public interface IAuthenticationService
     {
-        Task<AuthResponse> RegisterAsync(RegisterRequest request);
-        Task<AuthResponse> LoginAsync(LoginRequest request);
+        Task<AuthResponse> RegisterAsync(SignupRequestDTO request);
+        Task<AuthResponse> LoginAsync(LoginRequestDTO request);
     }
 }

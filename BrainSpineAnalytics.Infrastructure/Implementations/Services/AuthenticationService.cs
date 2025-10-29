@@ -1,4 +1,5 @@
-﻿using BrainSpineAnalytics.Application.DTOs;
+﻿using BrainSpineAnalytics.Application.DTOs.RequestDTOs.AuthDTO;
+using BrainSpineAnalytics.Application.DTOs.ResponseDTOs;
 using BrainSpineAnalytics.Application.Interfaces.Repositories;
 using BrainSpineAnalytics.Application.Interfaces.Security;
 using BrainSpineAnalytics.Application.Interfaces.Services;
@@ -25,7 +26,8 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services
             _jwtSettings = jwtOptions.Value;
             _hasher = hasher;
         }
-        public async Task<AuthResponse> LoginAsync(LoginRequest request)
+
+        public async Task<AuthResponse> LoginAsync(LoginRequestDTO request)
         {
             var user = await _authRepo.GetByEmailAsync(request.Email);
             if (user is null)
@@ -88,7 +90,7 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public async Task<AuthResponse> RegisterAsync(RegisterRequest request)
+        public async Task<AuthResponse> RegisterAsync(SignupRequestDTO request)
         {
             var existingUser = await _authRepo.GetByEmailAsync(request.Email);
             if (existingUser != null)
