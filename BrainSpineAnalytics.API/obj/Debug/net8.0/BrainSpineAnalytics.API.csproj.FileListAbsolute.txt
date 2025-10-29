@@ -89,3 +89,17 @@ D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpin
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\BrainSpineAnalytics.API.runtimeconfig.json
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\BrainSpineAnalytics.API.staticwebassets.endpoints.json
 D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\Publish\web.config
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\web.config
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\appsettings.Development.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\appsettings.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\appsettings.production.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\BrainSpineAnalytics.API.deps.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\BrainSpineAnalytics.API.runtimeconfig.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\BrainSpineAnalytics.API.staticwebassets.endpoints.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\Publish\appsettings.Development.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\Publish\appsettings.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\Publish\appsettings.production.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\Publish\BrainSpineAnalytics.API.deps.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\Publish\BrainSpineAnalytics.API.runtimeconfig.json
+D:\smartdataProjects\Brain Spine Analytics\BrainSpineAnalytics_Backend\BrainSpineAnalytics.API\bin\Debug\net8.0\Publish\Publish\Publish\Publish\Publish\BrainSpineAnalytics.API.staticwebassets.endpoints.json
