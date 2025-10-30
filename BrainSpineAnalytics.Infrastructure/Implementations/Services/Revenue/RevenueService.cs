@@ -4,6 +4,8 @@ using BrainSpineAnalytics.Application.Interfaces.Services.Revenue;
 using BrainSpineAnalytics.Application.Dtos.Requests.Revenue;
 using System;
 using System.Collections.Generic;
+using BrainSpineAnalytics.Common.Constants;
+
 
 namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Revenue
 {
@@ -21,7 +23,7 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Revenue
         public List<RevenueFactDto> GetRevenueByUser(string username)
         {
             var user = _userRepo.GetUserByUsername(username);
-            if (user == null) throw new Exception("User not found");
+            if (user == null) throw new Exception(CommonConstants.Messages.UserNotFound);
             return _revRepo.GetRevenue(user.ClinicId);
         }
     }

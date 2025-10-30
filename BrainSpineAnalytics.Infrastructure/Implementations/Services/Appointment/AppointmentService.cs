@@ -1,7 +1,9 @@
 ﻿using BrainSpineAnalytics.Application.Interfaces.Repositories.Appointments;
 using BrainSpineAnalytics.Application.Interfaces.Repositories.Users;
 using BrainSpineAnalytics.Application.Interfaces.Services.Appointments;
+using BrainSpineAnalytics.Common.Constants;
 using BrainSpineAnalytics.Domain.Entities;
+
 
 namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Appointment
 {
@@ -19,7 +21,7 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Appointmen
  public List<AppointmentFact> GetAppointmentsByUser(string username)
  {
  var user = _userRepo.GetUserByUsername(username);
- if (user == null) throw new Exception("User not found");
+ if (user == null) throw new Exception(CommonConstants.Messages.UserNotFound);
  return _apptRepo.GetAppointments(user.ClinicId);
  }
  }

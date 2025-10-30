@@ -21,6 +21,8 @@ using BrainSpineAnalytics.Infrastructure.Security;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using BrainSpineAnalytics.Application.Interfaces.Repositories.ErrorHandling;
+using BrainSpineAnalytics.Infrastructure.Implementations.Repositories.ErrorHandling;
 
 namespace BrainSpineAnalytics.Infrastructure;
 
@@ -36,6 +38,7 @@ public static class DependencyInjection
  services.AddScoped<IUserRepository, UserRepository>();
  services.AddScoped<IRevenueRepo, RevenueRepo>();
  services.AddScoped<IAppointmentRepo, AppointmentRepo>();
+ services.AddScoped<ILogRepo, LogRepo>();
 
  // Services
  services.AddScoped<IAuthenticationService, AuthenticationService>();

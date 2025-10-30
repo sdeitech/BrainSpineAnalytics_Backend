@@ -1,6 +1,7 @@
 using BrainSpineAnalytics.API.Extensions;
 using BrainSpineAnalytics.Application;
 using BrainSpineAnalytics.Infrastructure;
+using BrainSpineAnalytics.Infrastructure.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,7 @@ builder.Services
 
 var app = builder.Build();
 
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
  app.UseSwagger();
  app.UseSwaggerUI();
@@ -21,9 +22,10 @@ else
 {
  app.UseHsts();
 }
-
-app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
+app.UseCors("CorsPolicy");
+app.UseMiddleware<GlobalExceptionMiddleware>();
+
 
 app.UseAuthentication();
 app.UseAuthorization();

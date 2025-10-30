@@ -17,7 +17,7 @@ namespace BrainSpineAnalytics.Infrastructure.Data
         public DbSet<DummyFactAppointments> DummyFactAppointments { get; set; }
         public DbSet<DummyDimUserRole> DummyDimUserRoles { get; set; }
         public DbSet<DummyDimUser> DummyDimUsers { get; set; }
-
+        public DbSet<ErrorLog> ErrorLogs { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
