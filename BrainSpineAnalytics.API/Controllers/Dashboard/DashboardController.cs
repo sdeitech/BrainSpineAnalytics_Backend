@@ -18,6 +18,8 @@ namespace BrainSpineAnalytics.API.Controllers.Dashboard
         [HttpGet("dashboard")]
         public IActionResult Get([FromQuery] string username)
         {
+            var str = "Infosys Interview";
+            var result = string.Join(" ", str.Split(' ').Reverse());
             var data = _dashboardService.GetDashboardSummary(username);
             return Ok(data);
         }

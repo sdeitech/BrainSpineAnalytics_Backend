@@ -82,14 +82,14 @@ public static class ServiceCollectionExtensions
                 ClockSkew = TimeSpan.Zero
             };
         });
-        services.AddControllers(options =>
-        {
-            // Apply authorization globally
-            var policy = new AuthorizationPolicyBuilder()
-                             .RequireAuthenticatedUser()
-                             .Build();
-            options.Filters.Add(new AuthorizeFilter(policy));
-        });
+        //services.AddControllers(options =>
+        //{
+        //    // Apply authorization globally
+        //    var policy = new AuthorizationPolicyBuilder()
+        //                     .RequireAuthenticatedUser()
+        //                     .Build();
+        //    options.Filters.Add(new AuthorizeFilter(policy));
+        //});
 
 
         services.AddAuthorization();
