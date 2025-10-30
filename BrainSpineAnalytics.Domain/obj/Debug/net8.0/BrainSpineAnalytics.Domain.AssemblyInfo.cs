@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BrainSpineAnalytics.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57acc1fef9027be912f54ed1c897a0e66b5758a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1e5efcddee763556d3adeeb24d40f21b469090d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BrainSpineAnalytics.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BrainSpineAnalytics.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
