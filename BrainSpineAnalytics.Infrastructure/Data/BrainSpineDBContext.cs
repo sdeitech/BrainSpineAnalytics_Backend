@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BrainSpineAnalytics.Infrastructure.Data
 {
-    public class BrainSpineDBContext:DbContext
+    public class BrainSpineDbContext : DbContext
     {
-        public BrainSpineDBContext(DbContextOptions<BrainSpineDBContext> options) : base(options) { }
+        public BrainSpineDbContext(DbContextOptions<BrainSpineDbContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRoleMapping> UserRoleMappings { get; set; }

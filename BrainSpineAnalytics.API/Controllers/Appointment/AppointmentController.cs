@@ -1,4 +1,4 @@
-﻿using BrainSpineAnalytics.Application.Interfaces.Services.Appointment;
+﻿using BrainSpineAnalytics.Application.Interfaces.Services.Appointments;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BrainSpineAnalytics.API.Controllers.Appointment

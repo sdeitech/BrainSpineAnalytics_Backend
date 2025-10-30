@@ -1,14 +1,16 @@
-﻿using BrainSpineAnalytics.Application.DTOs.RequestDTOs.RevenueDto;
+﻿using BrainSpineAnalytics.Application.Dtos.Requests.Revenue;
 using BrainSpineAnalytics.Application.Interfaces.Repositories.Revenue;
 using BrainSpineAnalytics.Infrastructure.Data;
 using BrainSpineAnalytics.Domain.Entities;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Revenue
 {
     public class RevenueRepo:IRevenueRepo
     {
-        private readonly BrainSpineDBContext _context;
-        public RevenueRepo(BrainSpineDBContext context)
+        private readonly BrainSpineDbContext _context;
+        public RevenueRepo(BrainSpineDbContext context)
         {
             _context = context;
         }
@@ -29,8 +31,8 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Revenu
                          ProviderName = p.ProviderName,
                          PayerName = pr.PayerName,
                          ProcedureName = proc.ProcedureName,
-                         Revenue = f.Revenue ?? 0m, // Fixes CS0266 and CS8629
-                         Visits = f.Visits ?? 0      // Fixes CS0266 and CS8629
+                         Revenue = f.Revenue ??0m, // Fixes CS0266 and CS8629
+                         Visits = f.Visits ??0 // Fixes CS0266 and CS8629
                      };
 
             return query.ToList();

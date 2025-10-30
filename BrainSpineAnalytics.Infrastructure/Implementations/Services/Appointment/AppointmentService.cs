@@ -1,16 +1,16 @@
-﻿using BrainSpineAnalytics.Application.Interfaces.Repositories.Appointment;
+﻿using BrainSpineAnalytics.Application.Interfaces.Repositories.Appointments;
 using BrainSpineAnalytics.Application.Interfaces.Repositories.Users;
-using BrainSpineAnalytics.Application.Interfaces.Services.Appointment;
+using BrainSpineAnalytics.Application.Interfaces.Services.Appointments;
 using BrainSpineAnalytics.Domain.Entities;
 
 namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Appointment
 {
  public class AppointmentService : IAppointmentService
  {
- private readonly IUserRepo _userRepo;
+ private readonly IUserRepository _userRepo;
  private readonly IAppointmentRepo _apptRepo;
 
- public AppointmentService(IUserRepo userRepo, IAppointmentRepo apptRepo)
+ public AppointmentService(IUserRepository userRepo, IAppointmentRepo apptRepo)
  {
  _userRepo = userRepo;
  _apptRepo = apptRepo;
@@ -24,4 +24,5 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Appointmen
  }
  }
 }
+
 

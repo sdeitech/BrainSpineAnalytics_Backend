@@ -1,11 +1,7 @@
-﻿using BrainSpineAnalytics.Application.Interfaces.Services.Appointment;
-using BrainSpineAnalytics.Application.Interfaces.Services.Dashboard;
+﻿using BrainSpineAnalytics.Application.Interfaces.Services.Dashboard;
 using BrainSpineAnalytics.Application.Interfaces.Services.Revenue;
-using System;
-using System.Collections.Generic;
+using BrainSpineAnalytics.Application.Interfaces.Services.Appointments;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Dashboard
 {
@@ -34,5 +30,6 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Dashboard
                 Cancellations = apptList.Sum(a => a.Cancellations)
             };
         }
+
     }
 }

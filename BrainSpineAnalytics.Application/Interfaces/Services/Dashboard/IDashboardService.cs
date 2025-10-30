@@ -9,5 +9,6 @@ namespace BrainSpineAnalytics.Application.Interfaces.Services.Dashboard
     public interface IDashboardService
     {
         object GetDashboardSummary(string username);
+     
     }
 }

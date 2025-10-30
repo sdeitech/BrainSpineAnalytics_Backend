@@ -1,4 +1,4 @@
-﻿using BrainSpineAnalytics.Application.DTOs.RequestDTOs.UserDTO;
+﻿using BrainSpineAnalytics.Application.Dtos.Requests.Users;
 using BrainSpineAnalytics.Application.Interfaces.Repositories.Users;
 using BrainSpineAnalytics.Application.Interfaces.Services.Users;
 
@@ -6,14 +6,15 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Users
 {
  public class UserService : IUserService
  {
- private readonly IUserRepo _repo;
- public UserService(IUserRepo repo)
+ private readonly IUserRepository _repo;
+ public UserService(IUserRepository repo)
  {
  _repo = repo;
  }
 
- public UserDTO GetUserByUsername(string username) => _repo.GetUserByUsername(username);
+ public UserDto GetUserByUsername(string username) => _repo.GetUserByUsername(username);
  }
 
 }
+
 

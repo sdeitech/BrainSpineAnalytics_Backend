@@ -1,4 +1,4 @@
-﻿using BrainSpineAnalytics.Application.DTOs.RequestDTOs.RevenueDto;
+﻿using BrainSpineAnalytics.Application.Dtos.Requests.Revenue;
 using System.Collections.Generic;
 
 namespace BrainSpineAnalytics.Application.Interfaces.Services.Revenue
