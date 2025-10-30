@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "BrainSpineAnalytics.API.Controllers.Appointment.AppointmentController",
+    "Method": "Get",
+    "RelativePath": "api/Appointment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BrainSpineAnalytics.API.Controllers.Auth.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -9,7 +25,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "BrainSpineAnalytics.Application.DTOs.LoginRequest",
+        "Type": "BrainSpineAnalytics.API.Models.Requests.AuthRequest.LoginRequest",
         "IsRequired": true
       }
     ],
@@ -25,8 +41,24 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "BrainSpineAnalytics.Application.DTOs.RegisterRequest",
+        "Type": "BrainSpineAnalytics.API.Models.Requests.AuthRequest.SignupRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrainSpineAnalytics.API.Controllers.Dashboard.DashboardController",
+    "Method": "Get",
+    "RelativePath": "api/Dashboard/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -39,6 +71,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrainSpineAnalytics.API.Controllers.Revenue.RevenueController",
+    "Method": "Get",
+    "RelativePath": "api/Revenue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   }
 ]

@@ -9,6 +9,14 @@ namespace BrainSpineAnalytics.Infrastructure.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRoleMapping> UserRoleMappings { get; set; }
+        public DbSet<DummyFactRevenue> DummyFactRevenue { get; set; }
+        public DbSet<DummyDimClinic> DummyDimClinic { get; set; }
+        public DbSet<DummyDimProvider> DummyDimProvider { get; set; }
+        public DbSet<DummyDimPayer> DummyDimPayer { get; set; }
+        public DbSet<DummyDimProcedure> DummyDimProcedure { get; set; }
+        public DbSet<DummyFactAppointments> DummyFactAppointments { get; set; }
+        public DbSet<DummyDimUserRole> DummyDimUserRoles { get; set; }
+        public DbSet<DummyDimUser> DummyDimUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -55,6 +63,10 @@ namespace BrainSpineAnalytics.Infrastructure.Data
                       .HasForeignKey(e => e.RoleId)
                       .OnDelete(DeleteBehavior.Cascade);
             });
+            modelBuilder.Entity<DummyDimUser>()
+             .ToTable("dummy_dim_user");
+
+
         }
     }
 }

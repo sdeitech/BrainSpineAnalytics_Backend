@@ -1,10 +1,22 @@
 using BrainSpineAnalytics.Application.Interfaces.Repositories;
-using BrainSpineAnalytics.Application.Interfaces.Services;
+using BrainSpineAnalytics.Application.Interfaces.Repositories.Appointment;
+using BrainSpineAnalytics.Application.Interfaces.Repositories.Revenue;
+using BrainSpineAnalytics.Application.Interfaces.Repositories.Users;
 using BrainSpineAnalytics.Application.Interfaces.Security;
+using BrainSpineAnalytics.Application.Interfaces.Services;
+using BrainSpineAnalytics.Application.Interfaces.Services.Appointment;
+using BrainSpineAnalytics.Application.Interfaces.Services.Dashboard;
+using BrainSpineAnalytics.Application.Interfaces.Services.Revenue;
 using BrainSpineAnalytics.Common.Configuration;
 using BrainSpineAnalytics.Infrastructure.Data;
 using BrainSpineAnalytics.Infrastructure.Implementations.Repositories;
+using BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Appointment;
+using BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Revenue;
+using BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Users;
 using BrainSpineAnalytics.Infrastructure.Implementations.Services;
+using BrainSpineAnalytics.Infrastructure.Implementations.Services.Appointment;
+using BrainSpineAnalytics.Infrastructure.Implementations.Services.Dashboard;
+using BrainSpineAnalytics.Infrastructure.Implementations.Services.Revenue;
 using BrainSpineAnalytics.Infrastructure.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +27,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -58,7 +69,7 @@ var key = jwtSection.GetValue<string>("Key") ?? string.Empty;
 if (string.IsNullOrWhiteSpace(key))
 {
  throw new InvalidOperationException("JwtSettings:Key is missing. Add a non-empty key to configuration.");
- }
+}
 
 builder.Services
  .AddAuthentication(options =>
@@ -88,22 +99,30 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<IAuthRepo, AuthRepo>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddSingleton<IPasswordHasher, Pbkdf2PasswordHasher>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IRevenueService, RevenueService>();
+builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+
+builder.Services.AddScoped<IAppointmentRepo, AppointmentRepo>();
+builder.Services.AddScoped<IRevenueRepo, RevenueRepo>();
+
+// ? If you have IUserRepo, register it
+builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", builder =>
         builder
         /*WithOrigins(new string[] { "http://localhost:4200" })*/
-        .AllowAnyOrigin()
-        .AllowAnyMethod()
+ .AllowAnyOrigin()
+ .AllowAnyMethod()
         .AllowAnyHeader()
         );
 });
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
  app.UseSwagger();
  app.UseSwaggerUI();

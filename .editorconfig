@@ -1,0 +1,41 @@
+root = true
+
+[*.cs]
+dotnet_diagnostic.IDE1006.severity = warning
+# Naming rules
+# Interfaces start with I
+dotnet_naming_rule.interfaces_should_start_with_i.severity = suggestion
+dotnet_naming_rule.interfaces_should_start_with_i.symbols = interfaces
+dotnet_naming_rule.interfaces_should_start_with_i.style = prefix_i
+
+# Async methods should end with Async
+dotnet_naming_rule.async_methods_end_with_async.severity = suggestion
+dotnet_naming_rule.async_methods_end_with_async.symbols = async_methods
+dotnet_naming_rule.async_methods_end_with_async.style = end_in_async
+
+# Private fields should be _camelCase
+dotnet_naming_rule.private_fields_should_be_camel_with_underscore.severity = suggestion
+dotnet_naming_rule.private_fields_should_be_camel_with_underscore.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camel_with_underscore.style = camel_with_underscore
+
+# Symbols
+[*.cs]
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.async_methods.applicable_kinds = method
+# async by convention
+# dotnet_naming_symbols.async_methods.required_modifiers = async
+# Fields
+
+# Styles
+dotnet_naming_style.prefix_i.capitalization = pascal_case
+dotnet_naming_style.prefix_i.required_prefix = I
+
+dotnet_naming_style.end_in_async.capitalization = pascal_case
+dotnet_naming_style.end_in_async.required_suffix = Async
+
+dotnet_naming_style.camel_with_underscore.capitalization = camel_case
+dotnet_naming_style.camel_with_underscore.required_prefix = _
+
+# Code style preferences
+csharp_prefer_braces = true:suggestion
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion

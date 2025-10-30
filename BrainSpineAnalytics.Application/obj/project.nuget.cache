@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OCcP2jHDxgk=",
+  "dgSpecHash": "4quQuhMyNkc=",
   "success": true,
   "projectFilePath": "D:\\smartdataProjects\\Brain Spine Analytics\\BrainSpineAnalytics_Backend\\BrainSpineAnalytics.Application\\BrainSpineAnalytics.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sakshi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

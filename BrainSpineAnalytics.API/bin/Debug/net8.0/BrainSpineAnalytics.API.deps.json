@@ -886,7 +886,8 @@
       "BrainSpineAnalytics.Application/1.0.0": {
         "dependencies": {
           "BrainSpineAnalytics.Common": "1.0.0",
-          "BrainSpineAnalytics.Domain": "1.0.0"
+          "BrainSpineAnalytics.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "runtime": {
           "BrainSpineAnalytics.Application.dll": {
@@ -919,6 +920,7 @@
           "Microsoft.AspNetCore.Identity": "2.3.1",
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "8.0.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
           "System.IdentityModel.Tokens.Jwt": "7.6.3"
         },
         "runtime": {
