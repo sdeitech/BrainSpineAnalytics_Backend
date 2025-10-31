@@ -15,7 +15,7 @@ namespace BrainSpineAnalytics.API.Controllers.Menu
         {
             _menuService = menuService;
         }
-        [HttpGet("Menu")]
+        [HttpGet("NavBar")]
         public async  Task<IActionResult> GetMenu()
         {
 
