@@ -18,6 +18,10 @@ namespace BrainSpineAnalytics.Infrastructure.Data
         public DbSet<DummyDimUserRole> DummyDimUserRoles { get; set; }
         public DbSet<DummyDimUser> DummyDimUsers { get; set; }
         public DbSet<ErrorLog> ErrorLogs { get; set; }
+        public DbSet<Header> Headers { get; set; }
+        public DbSet<SubHeader> SubHeaders { get; set; }
+        public DbSet<HeaderSubHeaderMapping> HeaderSubHeaderMappings { get; set; }
+        public DbSet<HeaderSubHeaderRoleMapping> HeaderSubHeaderRoleMappings { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -42,14 +46,13 @@ namespace BrainSpineAnalytics.Infrastructure.Data
 
             modelBuilder.Entity<Role>(entity =>
             {
-                entity.ToTable("Roles");
+               
                 entity.HasKey(e => e.RoleId);
                 entity.Property(e => e.RoleId).ValueGeneratedOnAdd();
             });
 
             modelBuilder.Entity<UserRoleMapping>(entity =>
             {
-                entity.ToTable("UserRoleMapping");
                 entity.HasKey(e => e.UserRoleMappingId);
                 entity.Property(e => e.UserRoleMappingId).ValueGeneratedOnAdd();
 
@@ -66,7 +69,11 @@ namespace BrainSpineAnalytics.Infrastructure.Data
             modelBuilder.Entity<DummyDimUser>()
              .ToTable("dummy_dim_user");
 
+            modelBuilder.Entity<HeaderSubHeaderMapping>(entity =>
+            {
 
+                entity.ToTable("HeaderSubHeaderMapping");
+            });
         }
     }
 }

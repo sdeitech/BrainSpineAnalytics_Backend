@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BrainSpineAnalytics.Domain.Entities
 {
+    [Table("RoleMaster")]
     public class Role
     {
         public int RoleId { get; set; }

@@ -1,4 +1,5 @@
-﻿using BrainSpineAnalytics.Application.Interfaces.Repositories.Appointments;
+﻿using BrainSpineAnalytics.Application.DTOs.ResponseDTOs.Appointment;
+using BrainSpineAnalytics.Application.Interfaces.Repositories.Appointments;
 using BrainSpineAnalytics.Application.Interfaces.Repositories.Users;
 using BrainSpineAnalytics.Application.Interfaces.Services.Appointments;
 using BrainSpineAnalytics.Common.Constants;
@@ -18,7 +19,7 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Appointmen
  _apptRepo = apptRepo;
  }
 
- public List<AppointmentFact> GetAppointmentsByUser(string username)
+ public List<AppointmentFactDTO> GetAppointmentsByUser(string username)
  {
  var user = _userRepo.GetUserByUsername(username);
  if (user == null) throw new Exception(CommonConstants.Messages.UserNotFound);

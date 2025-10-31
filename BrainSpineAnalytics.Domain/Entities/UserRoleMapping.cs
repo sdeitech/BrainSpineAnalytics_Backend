@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BrainSpineAnalytics.Domain.Entities
 {
+    [Table("UserRoleMapping")]
     public class UserRoleMapping
     {
         [Key]

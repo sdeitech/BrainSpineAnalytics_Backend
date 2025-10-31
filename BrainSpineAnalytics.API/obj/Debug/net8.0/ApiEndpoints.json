@@ -74,6 +74,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BrainSpineAnalytics.API.Controllers.Menu.MenuController",
+    "Method": "Get",
+    "RelativePath": "api/Menu/Menu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BrainSpineAnalytics.API.Controllers.Revenue.RevenueController",
     "Method": "Get",
     "RelativePath": "api/Revenue",

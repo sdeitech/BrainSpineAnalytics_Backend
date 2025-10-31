@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrainSpineAnalytics.Application.DTOs.ResponseDTOs.Dashboard;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace BrainSpineAnalytics.Application.Interfaces.Services.Dashboard
 {
     public interface IDashboardService
     {
-        object GetDashboardSummary(string username);
+        DashboardSummaryDTO GetDashboardSummary(string username);
      
     }
 }

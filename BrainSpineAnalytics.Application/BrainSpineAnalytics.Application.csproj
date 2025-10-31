@@ -16,8 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\RequestDTOs\AuthDTO\" />
-    <Folder Include="DTOs\RequestDTOs\UserDTO\" />
     <Folder Include="Features\" />
   </ItemGroup>
 

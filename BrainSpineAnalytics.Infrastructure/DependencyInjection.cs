@@ -23,6 +23,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using BrainSpineAnalytics.Application.Interfaces.Repositories.ErrorHandling;
 using BrainSpineAnalytics.Infrastructure.Implementations.Repositories.ErrorHandling;
+using BrainSpineAnalytics.Application.Interfaces.Services.Menu;
+using BrainSpineAnalytics.Infrastructure.Implementations.Services.Menu;
+using BrainSpineAnalytics.Application.Interfaces.Repositories.Menu;
+using BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Menu;
 
 namespace BrainSpineAnalytics.Infrastructure;
 
@@ -39,13 +43,16 @@ public static class DependencyInjection
  services.AddScoped<IRevenueRepo, RevenueRepo>();
  services.AddScoped<IAppointmentRepo, AppointmentRepo>();
  services.AddScoped<ILogRepo, LogRepo>();
+ services.AddScoped<IMenuRepo, MenuRepo>();
 
- // Services
- services.AddScoped<IAuthenticationService, AuthenticationService>();
+        // Services
+        services.AddScoped<IAuthenticationService, AuthenticationService>();
  services.AddScoped<IUserService, UserService>();
  services.AddScoped<IRevenueService, RevenueService>();
  services.AddScoped<IAppointmentService, AppointmentService>();
  services.AddScoped<IDashboardService, DashboardService>();
+ services.AddScoped<IMenuService, MenuService>();
+
 
  // Security
  services.AddSingleton<BrainSpineAnalytics.Application.Interfaces.Security.IPasswordHasher, Pbkdf2PasswordHasher>();

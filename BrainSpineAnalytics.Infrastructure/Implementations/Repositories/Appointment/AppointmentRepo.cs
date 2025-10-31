@@ -1,4 +1,5 @@
-﻿using BrainSpineAnalytics.Application.Interfaces.Repositories.Appointments;
+﻿using BrainSpineAnalytics.Application.DTOs.ResponseDTOs.Appointment;
+using BrainSpineAnalytics.Application.Interfaces.Repositories.Appointments;
 using BrainSpineAnalytics.Domain.Entities;
 using BrainSpineAnalytics.Infrastructure.Data;
 using System.Linq;
@@ -13,14 +14,14 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Appoin
             _context = context;
         }
 
-        public List<AppointmentFact> GetAppointments(int? clinicId)
+        public List<AppointmentFactDTO> GetAppointments(int? clinicId)
         {
             var query = _context.DummyFactAppointments.AsQueryable();
 
             if (clinicId.HasValue)
                 query = query.Where(f => f.ClinicId == clinicId.Value);
 
-            var result = query.Select(f => new AppointmentFact
+            var result = query.Select(f => new AppointmentFactDTO
             {
                 Id = f.Id,
                 ClinicName = f.Clinic != null ? f.Clinic.ClinicName : "",

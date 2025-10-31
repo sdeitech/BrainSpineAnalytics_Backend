@@ -1,6 +1,7 @@
-﻿using BrainSpineAnalytics.Application.Interfaces.Services.Dashboard;
-using BrainSpineAnalytics.Application.Interfaces.Services.Revenue;
+﻿using BrainSpineAnalytics.Application.DTOs.ResponseDTOs.Dashboard;
 using BrainSpineAnalytics.Application.Interfaces.Services.Appointments;
+using BrainSpineAnalytics.Application.Interfaces.Services.Dashboard;
+using BrainSpineAnalytics.Application.Interfaces.Services.Revenue;
 using System.Linq;
 
 namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Dashboard
@@ -16,12 +17,12 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Dashboard
             _apptService = apptService;
         }
 
-        public object GetDashboardSummary(string username)
+        public DashboardSummaryDTO GetDashboardSummary(string username)
         {
             var revenueList = _revService.GetRevenueByUser(username);
             var apptList = _apptService.GetAppointmentsByUser(username);
 
-            return new
+            return new DashboardSummaryDTO
             {
                 TotalRevenue = revenueList.Sum(r => r.Revenue),
                 TotalVisits = revenueList.Sum(r => r.Visits),
