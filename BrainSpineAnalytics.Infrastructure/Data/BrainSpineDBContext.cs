@@ -22,6 +22,9 @@ namespace BrainSpineAnalytics.Infrastructure.Data
         public DbSet<SubHeader> SubHeaders { get; set; }
         public DbSet<HeaderSubHeaderMapping> HeaderSubHeaderMappings { get; set; }
         public DbSet<HeaderSubHeaderRoleMapping> HeaderSubHeaderRoleMappings { get; set; }
+        public DbSet<ScreenMaster> ScreenMasters { get; set; }
+        public DbSet<RoleScreenMapping> RoleScreenMappings { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

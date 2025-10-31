@@ -128,17 +128,6 @@
         "tags": [
           "Menu"
         ],
-        "parameters": [
-          {
-            "name": "roleId",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -158,6 +147,29 @@
             "style": "form",
             "schema": {
               "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Screen/ScreenList": {
+      "get": {
+        "tags": [
+          "Screen"
+        ],
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],

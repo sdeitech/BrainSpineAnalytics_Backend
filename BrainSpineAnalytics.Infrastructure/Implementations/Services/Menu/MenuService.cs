@@ -16,9 +16,9 @@ namespace BrainSpineAnalytics.Infrastructure.Implementations.Services.Menu
         {
             _menuRepo = menuRepo;
         }
-        public async Task<List<MenuListDTO>> GetMenuList(int roleId)
+        public async Task<List<MenuListDTO>> GetMenu()
         {
-          return await _menuRepo.GetMenuList(roleId);
+          return await _menuRepo.GetMenu();
         } 
     }
 }

@@ -75,18 +75,12 @@
   },
   {
     "ContainingType": "BrainSpineAnalytics.API.Controllers.Menu.MenuController",
-    "Method": "Get",
+    "Method": "GetMenu",
     "RelativePath": "api/Menu/Menu",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "roleId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -100,6 +94,22 @@
       {
         "Name": "username",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrainSpineAnalytics.API.Controllers.Screen.ScreenController",
+    "Method": "GetScreenList",
+    "RelativePath": "api/Screen/ScreenList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],

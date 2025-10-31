@@ -9,6 +9,6 @@ namespace BrainSpineAnalytics.Application.Interfaces.Services.Menu
 {
     public interface IMenuService
     {
-        Task<List<MenuListDTO>> GetMenuList(int roleId);
+        Task<List<MenuListDTO>> GetMenu();
     }
 }

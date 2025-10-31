@@ -16,10 +16,10 @@ namespace BrainSpineAnalytics.API.Controllers.Menu
             _menuService = menuService;
         }
         [HttpGet("Menu")]
-        public async  Task<IActionResult> Get(int roleId)
+        public async  Task<IActionResult> GetMenu()
         {
 
-            var data = await _menuService.GetMenuList(roleId);
+            var data = await _menuService.GetMenu();
             return Ok(data);
         }
 

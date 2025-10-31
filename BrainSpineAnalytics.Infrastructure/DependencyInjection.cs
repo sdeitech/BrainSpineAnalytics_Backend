@@ -27,6 +27,10 @@ using BrainSpineAnalytics.Application.Interfaces.Services.Menu;
 using BrainSpineAnalytics.Infrastructure.Implementations.Services.Menu;
 using BrainSpineAnalytics.Application.Interfaces.Repositories.Menu;
 using BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Menu;
+using BrainSpineAnalytics.Application.Interfaces.Repositories.Screen;
+using BrainSpineAnalytics.Infrastructure.Implementations.Repositories.Screen;
+using BrainSpineAnalytics.Application.Interfaces.Services.Screen;
+using BrainSpineAnalytics.Infrastructure.Implementations.Services.Screen;
 
 namespace BrainSpineAnalytics.Infrastructure;
 
@@ -44,6 +48,7 @@ public static class DependencyInjection
  services.AddScoped<IAppointmentRepo, AppointmentRepo>();
  services.AddScoped<ILogRepo, LogRepo>();
  services.AddScoped<IMenuRepo, MenuRepo>();
+ services.AddScoped<IScreenRepo, ScreenRepo>();
 
         // Services
         services.AddScoped<IAuthenticationService, AuthenticationService>();
@@ -52,6 +57,7 @@ public static class DependencyInjection
  services.AddScoped<IAppointmentService, AppointmentService>();
  services.AddScoped<IDashboardService, DashboardService>();
  services.AddScoped<IMenuService, MenuService>();
+ services.AddScoped<IScreenService, ScreenService>();
 
 
  // Security

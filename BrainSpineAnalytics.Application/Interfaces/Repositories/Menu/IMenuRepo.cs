@@ -9,6 +9,6 @@ namespace BrainSpineAnalytics.Application.Interfaces.Repositories.Menu
 {
     public interface IMenuRepo
     {
-        Task<List<MenuListDTO>> GetMenuList(int roleId);
+        Task<List<MenuListDTO>> GetMenu();
     }
 }
